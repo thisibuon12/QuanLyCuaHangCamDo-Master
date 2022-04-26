@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Quan_Ly_Cam_Do" Class="DB_Quan_Ly_Cam_DoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Quan_Ly_Cam_Do;Integrated Security=True" SettingsObjectName="Phan_Mem_Quan_Ly_Cam_Do.Properties.Settings" SettingsPropertyName="Quan_Ly_Cam_DoConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CHUNG_TU_CHI_TIET" Member="CHUNG_TU_CHI_TIETs">
+    <Type Name="CHUNG_TU_CHI_TIET">
+      <Column Name="Ma_Chi_Tiet" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ma_Chung_Tu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ten_Tai_San" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Loai_Vang" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Trong_Luong" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Trong_Luong_Vang_18k" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Trong_Luong_Vang_24k" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Trong_Luong_Khac" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Chuan_Do" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Gia_Tri_Vat_Cam" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Sap_Xep" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="CHUNG_TU_CHUNG_TU_CHI_TIET" Member="CHUNG_TU" ThisKey="Ma_Chung_Tu" Type="CHUNG_TU" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUNG_TU" Member="CHUNG_TUs">
+    <Type Name="CHUNG_TU">
+      <Column Name="Ma_Chung_Tu" Type="System.String" DbType="NVarChar(250) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="So" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Lien" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Ten_Khach_Hang" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="So_CMND" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ngay_Cap_CMND" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Noi_Cap" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ngay_Sinh" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Dia_Chi" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="So_Dien_Thoai" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Chu_Tiem" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="So_Tien_Cam" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Tu_Ngay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Den_Ngay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Lai_Suat_Ngay" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Lai_Suat_Thang" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Ghi_Chu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Tien_Lai_Cu" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Chung_Tu_Goc" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Da_Lam_Lai_Giay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Da_Chuoc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Mat_Giay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sap_Xep" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="CHUNG_TU_CHUNG_TU_CHI_TIET" Member="CHUNG_TU_CHI_TIETs" OtherKey="Ma_Chung_Tu" Type="CHUNG_TU_CHI_TIET" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUNG_TU_THU_CHI" Member="CHUNG_TU_THU_CHIs">
+    <Type Name="CHUNG_TU_THU_CHI">
+      <Column Name="Ma" Type="System.String" DbType="NVarChar(250) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Ngay_Ghi_So" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Ma_Chung_Tu_Cam_Do" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="So_Tien_Cam" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Tien_Lai" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="So_Tien_Thu" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="So_Tien_Chi" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Tien_Lai_Cu" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Loai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ma_Phan_Loai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phan_Loai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ten_Loai" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Ghi_Chu" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Sap_Xep" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

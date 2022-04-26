@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CauHinhCSDL>
+    <MayChu>ESON-PC</MayChu>
+    <SuDungTaiKhoanWindows>True</SuDungTaiKhoanWindows>
+    <TaiKhoanSQL>giangnamnam</TaiKhoanSQL>
+    <Password>12345</Password>
+    <CSDL>Quan_Ly_Cam_Do</CSDL>
+    <TenTiem>Tiệm Cầm Đồ Phan Anh</TenTiem>
+    <BienNhanCamDo>Phan Anh</BienNhanCamDo>
+    <DiaChi>668 - Tân Bình- Tp.HCM</DiaChi>
+    <DienThoai>0823.882.222</DienThoai>
+    <LaiSuat>3</LaiSuat>
+    <ThoiHanQuyDinh>2</ThoiHanQuyDinh>
+  </CauHinhCSDL>
+</NewDataSet>

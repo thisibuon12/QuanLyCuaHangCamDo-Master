@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB_Quan_Ly_Cam_Do">
+  <DataContextMoniker Name="/DB_Quan_Ly_Cam_DoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="05b92346-245c-49a3-a15e-ff309bb5805e" absoluteBounds="8.75, 2.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DB_Quan_Ly_Cam_DoDataContext/CHUNG_TU_CHI_TIET" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cd35c47-c3f2-4f6f-8d2e-c1fc769a0947" absoluteBounds="8.765, 2.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1403d51c-a921-4e17-b3f8-6e6f01851714" absoluteBounds="5.25, 0.75, 2, 5.4246240234375">
+      <DataClassMoniker Name="/DB_Quan_Ly_Cam_DoDataContext/CHUNG_TU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6c0bcd3-2c96-4384-afd7-dca086ba999b" absoluteBounds="5.265, 1.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 3.58735270182292); (8.75 : 3.58735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_Quan_Ly_Cam_DoDataContext/CHUNG_TU/CHUNG_TU_CHUNG_TU_CHI_TIET" />
+      <nodes>
+        <classShapeMoniker Id="1403d51c-a921-4e17-b3f8-6e6f01851714" />
+        <classShapeMoniker Id="05b92346-245c-49a3-a15e-ff309bb5805e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2a60fdb6-41a4-4d75-bfcf-f5bc7b15a68e" absoluteBounds="2.125, 1.125, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/DB_Quan_Ly_Cam_DoDataContext/CHUNG_TU_THU_CHI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d04ecce4-978d-4310-813a-e6aab629b194" absoluteBounds="2.14, 1.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
